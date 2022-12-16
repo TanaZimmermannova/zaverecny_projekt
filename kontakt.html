@@ -1,0 +1,75 @@
+---
+layout: layouts/final.njk
+title: Kontakt
+perex1: Kontakt
+perex2: Dejte nám o sobě vědět.
+foto1: /images/kontakt1.jpg
+foto2: /images/kontakt2.jpg
+foto3: /images/kontakt3.jpg
+alt: kontakt
+odkaz1: /kontakt/#mapa
+icon1: /images/location_globe.png
+alt1: globus
+text1: Adresa
+odkaz2: /kontakt/#telefon
+icon2: /images/telefon.png
+alt2: telefon
+text2: Telefon
+odkaz3: /kontakt/#form
+icon3: /images/kontakt.png
+alt3: formulář
+text3: Kontaktní formulář
+---
+<div id="mapa" class="mapa">
+    <div class="main__odsazeni">
+        <h1 class="main__nadpis">Kde nás najdete?</h1>
+        <p class="main__text"> Ostružnická 21, 779 00 Olomouc </p>
+    </div>
+
+    <iframe class="mapa__maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2586.1416883479515!2d17.25100161581051!3d49.595077456506225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47124ef4aff17307%3A0xc4bc9877c2313ae7!2sOstru%C5%BEnick%C3%A1%2021%2C%20779%2000%20Olomouc!5e0!3m2!1scs!2scz!4v1671194430771!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div id="telefon" class="tel main__odsazeni">
+        <h1 class="main__nadpis main__nadpis--odskok">V případě dotazů nám zavolejte</h1>
+        
+        <div class="tel__flex">
+            <div class="tel__flex tel__flex--size">
+                <img src="/images/telephone.png" alt="pevna linka">
+                <p class="main__text">+420 585 259 867</p>
+            </div>
+
+            <div class="tel__flex tel__flex--size">
+                <img src="/images/phone.png" alt="mobilní telefon">
+                <p class="main__text">+420 778 123 456</p>
+            </div>
+        </div>
+ </div>
+
+<div id="form" class="formular">
+    <div class="main__odsazeni">
+        <h1 class="main__nadpis main__nadpis--odskok">Kontaktní formulář</h1>
+    </div>
+        
+    <form class="form__background" method="post">
+        Jméno: <br />
+        <input type="text" name="jmeno" /><br />
+        <br />
+        Přijmení: <br />
+        <input type="text" name="prijmeni" /><br />
+        <br />
+        Telefon: <br />
+        <input type="text" name="telefon" /><br />
+        <br />
+        E-mail: <br />
+        <input type="email" name="email" /><br />
+        <br />
+        Dotaz: <br />
+        <textarea name="komentar" rows="5" cols="40" wrap="soft" placeholder="Zde nám prosím napište Váš dotaz ... "></textarea> <br />
+        <br />
+        Příloha: <br />
+        <input type="file" name="foto" accept="image/*" /> <br />
+        <br />
+        <input type="submit" />
+    </form>
+
+</div>

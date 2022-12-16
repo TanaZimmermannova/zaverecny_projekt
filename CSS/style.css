@@ -1,0 +1,287 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1E1A1D;
+}
+
+.background {
+  background-color: #0B090B;
+  opacity: 90%;
+  z-index: -2;
+}
+
+h1, h2 {
+  font-family: "Roboto Slab", serif;
+  color: #1E1A1D;
+  margin: 16px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 910px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+.header {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  grid-template-columns: 2fr 150px 1fr 150px 1fr 150px 2fr;
+  grid-template-rows: 147px 163px 50px 100px;
+}
+@media screen and (min-width: 910px) {
+  .header {
+    grid-template-rows: 127px 373px 100px 50px;
+  }
+}
+.header__info {
+  max-width: 100%;
+  background-color: #1E1A1D;
+  opacity: 70%;
+  padding-top: 20px;
+  grid-column: 1/-1;
+  grid-row: 1/span 1;
+}
+@media screen and (min-width: 910px) {
+  .header__info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    height: 127px;
+  }
+}
+.header__logo {
+  text-decoration: none;
+  color: #F9A03F;
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  margin: 20px 20px 20px 30px;
+  align-self: center;
+}
+.header__connect {
+  line-height: 20px;
+}
+.header__connect--hidden {
+  display: none;
+}
+@media screen and (min-width: 910px) {
+  .header__connect--hidden {
+    display: flex;
+    justify-content: end;
+  }
+}
+.header__menu {
+  padding: 20px 0;
+}
+.header__item {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 20px 30px;
+}
+.header__item--hover:hover {
+  background-color: black;
+  border-left: 2px solid #F9A03F;
+  color: #F9A03F;
+}
+.header__item--active {
+  background-color: black;
+  border-left: 2px solid #F9A03F;
+  color: #F9A03F;
+}
+.header__foto {
+  width: 100%;
+  height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 910px) {
+  .header__foto {
+    height: 600px;
+  }
+}
+.header__title {
+  grid-area: 2/1/3/-1;
+  padding: 40px;
+}
+.header__background {
+  background-color: #1E1A1D;
+  opacity: 50%;
+  padding: 10px;
+}
+.header__background h1, .header__background h2 {
+  color: white;
+}
+
+.glide {
+  z-index: -1;
+  grid-area: 1/1/4/-1;
+  max-height: 100%;
+}
+
+.odkaz {
+  background-color: #F9A03F;
+  padding: 20px;
+  text-decoration: none;
+  display: grid;
+  gap: 20px;
+}
+.odkaz__1 {
+  grid-area: 3/2/-1/3;
+}
+.odkaz__2 {
+  grid-area: 3/4/-1/5;
+}
+.odkaz__3 {
+  grid-area: 3/6/-1/7;
+}
+.odkaz__ikona {
+  width: 50px;
+  justify-self: center;
+  align-self: center;
+}
+.odkaz__popis {
+  color: black;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+.main__sluzby, .main__kariera {
+  flex-direction: column;
+}
+.main__nadpis {
+  font-size: 30px;
+  color: #F9A03F;
+  font-family: "Roboto Slab", serif;
+}
+.main__nadpis--odskok::before {
+  display: block;
+  width: 500px;
+  height: 2px;
+  background-color: #F9A03F;
+  content: "";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main__text {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+.main__img {
+  width: 300px;
+  max-width: 100%;
+  height: 100%;
+}
+.main__popispozice {
+  color: white;
+}
+.main__odsazeni {
+  padding: 40px 40px 0 40px;
+}
+
+.footer {
+  background-color: black;
+  opacity: 0.7;
+  padding: 30px;
+}
+.footer__nav {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.footer__nav .footer__text {
+  font-size: 16px;
+}
+.footer__nav--centre {
+  padding: 0 40px;
+  border-left: 2px solid #F9A03F;
+  border-right: 2px solid #F9A03F;
+}
+.footer__text {
+  color: #F9A03F;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+.footer__kontakt {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+.footer__img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+.footer__odkaz {
+  color: white;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin: 3px;
+}
+
+.galery__item {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mapa {
+  display: grid;
+}
+.mapa__maps {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  justify-self: center;
+  filter: invert(90%);
+  margin: 0;
+}
+
+.tel__flex {
+  display: flex;
+  gap: 20px;
+}
+.tel__flex--size {
+  flex-basis: 250px;
+}
+
+.form__background {
+  background-image: url(/images/kontakt_pozadi.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-style: 16px;
+}
+
+hr {
+  margin-top: 40px;
+  color: #F9A03F;
+}

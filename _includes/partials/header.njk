@@ -1,0 +1,71 @@
+        <header class="header">
+
+            <div class="header__info">
+                <a class="header__logo" href="/"><img src="/images/logo.png" alt="logo">  DŮM SNŮ</a>
+        
+                <div>
+                    <div class="header__connect header__connect--hidden">
+                        <div class="header__item"> tel: +420 778 123 456 </div>
+                        <a class="header__item" href="mailto: dumsnu@dumsnu.cz"> e-mail: dumsnu@dumsnu.cz </a>
+                    </div>
+        
+                    <nav class="header__menu">
+                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === '' }}" href="/">Úvod</a>
+                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'sluzby' }}" href="/sluzby/">Služby</a>
+                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'realizace' }}" href="/realizace/">Realizace</a>
+                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'kariera' }}" href="/kariera/">Kariéra</a>
+                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'kontakt' }}" href="/kontakt/">Kontakt</a>
+                    </nav>
+                </div>
+            </div>
+        
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide"><img class="header__foto" src="{{ foto1 }}" alt="{{ alt }}"></li>
+                        <li class="glide__slide"><img class="header__foto" src="{{ foto2 }}" alt="{{ alt }}"></li>
+                        <li class="glide__slide"><img class="header__foto" src="{{ foto3 }}" alt="{{ alt }}"></li>
+                    </ul>
+                </div>
+        
+                <script src="/JS/glide.min.js"></script>
+        
+                <script>
+                    new Glide('.glide',{
+                        type:'carousel',
+                        startAt: 0,
+                        perView: 1,
+                        autoplay: 10000,
+                        gap: 0,
+                        hoverpause: true,
+                        keyboard: true,
+                        animationTimingFunc: "ease-in-out",
+                        animationDuration: 2000,
+                        rewindDuration: 5000
+                    }).mount()
+                </script>
+            </div>
+                
+            <div class="header__title">
+                <div class="header__background">
+                    <h1 class="header__nadpis"> {{ perex1 }} </h1>
+                    <h2 class="header__H2"> {{ perex2 }} </h2>
+                </div>
+            </div>
+        
+            <a class="odkaz odkaz__1" href="{{ odkaz1 }}">
+                <img class="odkaz__ikona" src="{{ icon1 }}" alt="{{ alt1 }}">
+                <p class="odkaz__popis"> {{ text1 }} </p>
+            </a>
+        
+            <a class="odkaz odkaz__2" href="{{ odkaz2 }}">
+                <img class="odkaz__ikona" src="{{ icon2 }}" alt="{{ alt2 }}">
+                <p class="odkaz__popis"> {{ text2 }} </p>
+            </a>
+        
+            <a class="odkaz odkaz__3" href="{{ odkaz3 }}">
+                <img class="odkaz__ikona" src="{{ icon3 }}" alt="{{ alt3 }}">
+                <p class="odkaz__popis"> {{ text3 }} </p>
+            </a>          
+        
+        </header>

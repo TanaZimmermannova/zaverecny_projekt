@@ -1,0 +1,332 @@
+html {box-sizing: border-box;}
+*, ::after, ::before {box-sizing: inherit;}
+
+$color: white;
+$color-text: black;
+$color-background: #1E1A1D;
+$color-primary: #F9A03F;
+$color-secondary:#4D7EA8;
+$color-background2:#0B090B;
+
+$size: 16px;
+$size-M: 20px;
+$size-L: 30px;
+
+$font-main: 'Roboto Slab', serif;
+$font: 'Open Sans', sans-serif;
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: $color-background;
+}
+
+.background {
+    background-color: $color-background2;
+    opacity: 90%;
+    z-index: -2;
+}
+
+h1, h2 {
+    font-family: $font-main;
+    color: $color-background;
+    margin: $size;
+    margin: 0;
+}
+
+h1 {
+    font-size: $size-L;
+    margin-bottom: 10px;
+
+        @media screen and (min-width: 910px){
+            font-size: 2*$size-M;
+        }
+}
+
+.header {
+    color: $color;
+    font-family: $font;
+    display: grid;
+    grid-template-columns: 2fr 150px 1fr 150px 1fr 150px 2fr;
+    grid-template-rows: 147px 163px 50px 100px;
+
+        @media screen and (min-width: 910px){
+            grid-template-rows: 127px 373px 100px 50px;
+        }
+    
+    &__info {
+        max-width: 100%;
+        background-color: $color-background;
+        opacity: 70%;
+        padding-top: $size-M;
+        grid-column: 1 / -1;
+        grid-row: 1 / span 1;
+
+            @media screen and (min-width: 910px){
+                display: flex;
+                justify-content: space-between;
+                padding-top: 0;
+                height: 127px;
+            }
+    }
+
+    &__logo {
+        text-decoration: none;
+        color: $color-primary;
+        font-size: $size-L;
+        font-family: $font;
+        margin: $size-M $size-M $size-M $size-L;
+        align-self: center;
+    }
+
+    &__connect {
+        line-height: $size-M;
+
+        &--hidden {
+            display: none;
+
+            @media screen and (min-width: 910px) {
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+
+    &__menu {
+        padding: $size-M 0;
+    }
+
+    &__item {
+        font-size: $size-M;
+        color: $color;
+        text-decoration: none;
+        padding: $size-M $size-L;
+
+        &--hover:hover {
+            background-color: black;
+            border-left: 2px solid $color-primary;
+            color: $color-primary;
+        }
+
+        &--active {
+            background-color: black;
+            border-left: 2px solid $color-primary;
+            color: $color-primary;
+        }
+    }
+
+    &__foto {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+
+            @media screen and (min-width: 910px){
+                height: 600px;
+            }
+    }
+
+    &__title {
+        grid-area: 2 / 1 / 3 / -1;
+        padding: 2*$size-M;
+    }
+
+    &__background {
+        background-color: $color-background;
+        opacity: 50%;
+        padding: 10px;
+
+        & h1,
+        & h2 {
+            color: $color;
+        }
+    }
+}
+
+.glide {
+    z-index: -1;
+    grid-area: 1 / 1 / 4 / -1;
+    max-height: 100%;
+
+}
+
+.odkaz {
+        background-color: $color-primary;
+        padding: $size-M;
+        text-decoration: none;
+        display: grid;
+        gap: 20px;
+
+        &__1 {
+            grid-area: 3 / 2 / -1 / 3;
+        }
+
+        &__2 {
+            grid-area: 3 / 4 / -1 / 5;
+        }
+
+        &__3 {
+            grid-area: 3 / 6 / -1 / 7;
+        }
+
+    &__ikona {
+        width: 50px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    &__popis {
+        color: $color-text;
+        font-family: $font-main;
+        font-size: $size-M;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.main {
+    display: flex;
+    gap: 2*$size-M;
+    padding: 2*$size-M;
+
+    &__sluzby,
+    &__kariera {
+        flex-direction: column;
+    }
+
+    &__nadpis {
+        font-size: $size-L;
+        color: $color-primary;
+        font-family: $font-main;
+
+        &--odskok::before {
+            display: block;
+            width: 500px;
+            height: 2px;
+            background-color: $color-primary;
+            content:"";
+            margin-top: $size-M;
+            margin-bottom: $size-M;
+        }
+    }
+
+    &__text {
+        color: $color;
+        font-family: $font;
+    }
+
+    &__img {
+        width: 300px;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    &__popispozice {
+        color: $color;
+    }
+
+    &__odsazeni {
+        padding: 2*$size-M 2*$size-M 0 2*$size-M;
+    }
+}
+
+.footer {
+    background-color: black;
+    opacity: 0.7;
+    padding: $size-L;
+
+    &__nav {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        & .footer__text {
+            font-size: $size;
+        }
+
+        &--centre {
+            padding: 0 40px;
+            border-left: 2px solid $color-primary;
+            border-right: 2px solid $color-primary;
+        }
+    }
+    
+    &__text {
+        color: $color-primary;
+        padding: 10px;
+        font-family: $font;
+        font-size: $size-M;
+        text-align: center;
+        margin: 0;
+    }
+
+    &__kontakt {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    &__img {
+        width: 30px;
+        height: 30px;
+        align-self: center;
+    }
+
+    &__odkaz {
+        color: $color;
+        font-size: 12px;
+        font-family: $font;
+        text-align: center;
+        margin: 3px;
+    }
+}
+
+.galery {
+    &__item {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.mapa {
+    display: grid;
+
+    &__maps {
+        width: 100%;
+        max-width: 1200px;
+        height: 500px;
+        justify-self: center;
+        filter: invert(90%);
+        margin: 0;
+    }
+}
+
+.tel {
+    &__flex {
+        display: flex;
+        gap: $size-M;
+
+        &--size {
+        flex-basis: 250px;
+        }
+    }
+}
+
+.form {
+
+    &__background {
+        background-image: url(/images/kontakt_pozadi.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2*$size-M;
+        font-family: $font;
+        font-style: $size;   
+    }
+}
+
+hr {
+    margin-top: 2*$size-M;
+    color: $color-primary;
+}
