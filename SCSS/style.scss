@@ -55,7 +55,7 @@ h2 {
             font-size: $size-M;
         }
 
-        @media screen and (min-width: 1000px){
+        @media screen and (min-width: 910px){
             font-size: $size-L;
         }
 }
@@ -88,7 +88,7 @@ h2 {
                 justify-content: center
             }
 
-            @media screen and (min-width: 900px){
+            @media screen and (min-width: 910px){
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
