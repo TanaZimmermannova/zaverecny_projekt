@@ -492,8 +492,11 @@ h2 {
 
 .tel {
     &__flex {
-        display: flex;
-        gap: $size-M;
+
+        @media screen and (min-width:660px){
+            display: flex;
+            gap: $size-M;
+        }
 
         &--size {
         flex-basis: 250px;
