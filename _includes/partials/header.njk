@@ -3,19 +3,24 @@
             <div class="header__info">
                 <a class="header__logo" href="/"><img src="/images/logo.png" alt="logo">  DŮM SNŮ</a>
         
-                <div>
+                <div class="hamburger">
                     <div class="header__connect header__connect--hidden">
-                        <div class="header__item"> tel: +420 778 123 456 </div>
-                        <a class="header__item" href="mailto: dumsnu@dumsnu.cz"> e-mail: dumsnu@dumsnu.cz </a>
+                        <div class="header__call"> tel: +420 778 123 456 </div>
+                        <a class="header__call" href="mailto: dumsnu@dumsnu.cz"> e-mail: dumsnu@dumsnu.cz </a>
                     </div>
-        
-                    <nav class="header__menu">
-                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === '' }}" href="/">Úvod</a>
-                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'sluzby' }}" href="/sluzby/">Služby</a>
-                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'realizace' }}" href="/realizace/">Realizace</a>
-                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'kariera' }}" href="/kariera/">Kariéra</a>
-                        <a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'kontakt' }}" href="/kontakt/">Kontakt</a>
-                    </nav>
+
+                    <div class = "hamburger__menu">
+                        <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+                        <label for="menu-checkbox" class="menu__toggler">☰ MENU </label>
+            
+                        <ul class="header__menu">
+                            <li class="menu__item"><a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === '' }}" href="/">Úvod</a></li>
+                            <li class="menu__item"><a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'sluzby' }}" href="/sluzby/">Služby</a></li>
+                            <li class="menu__item"><a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'realizace' }}" href="/realizace/">Realizace</a></li>
+                            <li class="menu__item"><a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'kariera' }}" href="/kariera/">Kariéra</a></li>
+                            <li class="menu__item"><a class="header__item header__item--hover {{ 'header__item--active' if page.fileSlug === 'kontakt' }}" href="/kontakt/">Kontakt</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         

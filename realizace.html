@@ -20,14 +20,14 @@ icon3: /images/furniture.png
 alt3: Interiér
 text3: Interiéry
 ---
-<div id="novostavby" class="galery">
+<div id="novostavby" class="galery galery__PC">
     <div class="main__odsazeni">
         <h1 class="main__nadpis"> Novostavby </h1>
         <p class="main__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit officia ad molestiae odit, eaque libero quo asperiores doloremque natus incidunt.</p>
         <a class="main__button" href="/kontakt/">Více info ... </a>
     </div>
 
-    <div class="glide glide__glide2">
+    <div class="glide glide__glide2 ">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 <li class="glide__slide"><img class="galery__item" src="/images/novostavba1.jpg" alt="novostavba"></li>
@@ -72,7 +72,7 @@ text3: Interiéry
     </div>
 </div>    
 
-<div id="opravy" class="galery">
+<div id="opravy" class="galery galery__PC">
     <div class="main__odsazeni">
         <h1 class="main__nadpis main__nadpis--odskok">Opravy budov</h1>
         <p class="main__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, tempora numquam aliquid quidem placeat repellat!</p>
@@ -121,7 +121,7 @@ text3: Interiéry
 
 </div>
 
-<div id="interier" class="galery">
+<div id="interier" class="galery galery__PC">
     <div class="main__odsazeni">
         <h1 class="main__nadpis main__nadpis--odskok"> Interiéry </h1>
         <p class="main__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quis reprehenderit iusto fuga provident id unde, cumque consectetur, impedit ad vel non soluta nisi cum necessitatibus? Quas quasi quam eos.</p>
@@ -174,7 +174,165 @@ text3: Interiéry
                 rewindDuration: 3000
             }).mount()
         </script>
+    </div>
+</div>
 
+
+
+<div id="novostavby1" class="galery galery__mobil">
+    <div class="main__odsazeni">
+        <h1 class="main__nadpis"> Novostavby </h1>
+        <p class="main__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit officia ad molestiae odit, eaque libero quo asperiores doloremque natus incidunt.</p>
+        <a class="main__button" href="/kontakt/">Více info ... </a>
     </div>
 
+    <div class="glide glide__glide5 ">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img class="galery__item" src="/images/novostavba1.jpg" alt="novostavba"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/novostavba2.jpg" alt="novostavba"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/novostavba3.jpg" alt="novostavba"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/novostavba4.jpg" alt="novostavba"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/novostavba5.jpg" alt="novostavba"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/novostavba6.jpg" alt="novostavba"></li>
+            </ul>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> < </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"> > </button>
+        </div>
+    
+        <script src="/JS/glide.min.js"></script>
+    
+        <script>
+            new Glide('.glide__glide5',{
+                type:'carousel',
+                startAt: 0,
+                perView: 2,
+                autoplay: 2500,
+                gap: 0,
+                hoverpause: true,
+                keyboard: true,
+                animationTimingFunc: "ease-in-out",
+                animationDuration: 1500,
+                rewindDuration: 3000
+            }).mount()
+        </script>
+    </div>
+</div>  
+
+
+<div id="opravy" class="galery galery__mobil">
+    <div class="main__odsazeni">
+        <h1 class="main__nadpis main__nadpis--odskok">Opravy budov</h1>
+        <p class="main__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, tempora numquam aliquid quidem placeat repellat!</p>
+        <a class="main__button" href="/kontakt/">Více info ... </a>
+    </div>
+
+    <div class="glide glide__glide6">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img class="galery__item" src="/images/rekonstrukce1.jpg" alt="rekonstrukce"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/rekonstrukce2.jpg" alt="rekonstrukce"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/rekonstrukce3.jpg" alt="rekonstrukce"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/rekonstrukce4.jpg" alt="rekonstrukce"></li>
+            </ul>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> < </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"> > </button>
+        </div>
+    
+        <script src="/JS/glide.min.js"></script>
+    
+        <script>
+            new Glide('.glide__glide6',{
+                type:'carousel',
+                startAt: 0,
+                perView: 2,
+                autoplay: 5000,
+                gap: 0,
+                hoverpause: true,
+                keyboard: true,
+                animationTimingFunc: "ease-in-out",
+                animationDuration: 1500,
+                rewindDuration: 3000
+            }).mount()
+        </script>
+    </div>
+
+</div>
+
+<div id="interier" class="galery galery__mobil">
+    <div class="main__odsazeni">
+        <h1 class="main__nadpis main__nadpis--odskok"> Interiéry </h1>
+        <p class="main__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quis reprehenderit iusto fuga provident id unde, cumque consectetur, impedit ad vel non soluta nisi cum necessitatibus? Quas quasi quam eos.</p>
+        <a class="main__button" href="/kontakt/">Více info ... </a>
+    </div>
+
+    <div class="glide glide__glide7">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img class="galery__item" src="/images/interier1.jpg" alt="interiér"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/interier2.jpg" alt="interiér"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/interier3.jpg" alt="interiér"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/interier4.jpg" alt="interiér"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/interier5.jpg" alt="interiér"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/interier6.jpg" alt="interiér"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/interier7.jpg" alt="interiér"></li>
+                <li class="glide__slide"><img class="galery__item" src="/images/interier8.jpg" alt="interiér"></li>
+            </ul>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+            <button class="glide__bullet" data-glide-dir="=6"></button>
+            <button class="glide__bullet" data-glide-dir="=7"></button>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> < </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"> > </button>
+        </div>
+    
+        <script src="/JS/glide.min.js"></script>
+    
+        <script>
+            new Glide('.glide__glide7',{
+                type:'carousel',
+                startAt: 0,
+                perView: 2,
+                autoplay: 2500,
+                gap: 0,
+                hoverpause: true,
+                keyboard: true,
+                animationTimingFunc: "ease-in-out",
+                animationDuration: 1500,
+                rewindDuration: 3000
+            }).mount()
+        </script>
+    </div>
 </div>

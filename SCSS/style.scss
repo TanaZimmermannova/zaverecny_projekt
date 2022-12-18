@@ -65,7 +65,7 @@ h2 {
     font-family: $font;
     display: grid;
     grid-template-columns: 2fr 150px 1fr 150px 1fr 150px 2fr;
-    grid-template-rows: 147px 163px 50px 100px;
+    grid-template-rows: auto auto 0 0;
 
         @media screen and (min-width: 910px){
             grid-template-rows: 127px 373px 100px 50px;
@@ -73,17 +73,26 @@ h2 {
     
     &__info {
         max-width: 100%;
+        max-height: 100%;
         background-color: $color-background;
         opacity: 70%;
         padding-top: $size-M;
         grid-column: 1 / -1;
-        grid-row: 1 / span 1;
+        grid-row: 1 / 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
 
-            @media screen and (min-width: 910px){
-                display: flex;
+            @media screen and (min-width: 660px){
+                flex-direction: column;
+                justify-content: center
+            }
+
+            @media screen and (min-width: 900px){
+                flex-direction: row;
                 justify-content: space-between;
-                padding-top: 0;
-                height: 127px;
+                align-items: center;
+                padding: 0;
             }
     }
 
@@ -92,8 +101,11 @@ h2 {
         color: $color-primary;
         font-size: $size-L;
         font-family: $font;
-        margin: $size-M $size-M $size-M $size-L;
-        align-self: center;
+        margin: $size-M auto;
+
+        @media screen and (min-width: 910px) {
+            margin-left: 2*$size-M;
+        }
     }
 
     &__connect {
@@ -110,31 +122,57 @@ h2 {
     }
 
     &__menu {
-        padding: $size-M 0;
+        padding: 0;
+        display: none;
+        margin: 0;
+        list-style: none;
+
+        @media screen and (min-width: 660px){
+            display: flex;
+        }
+    }
+
+    &__call {
+        font-size: $size-M;
+        color: $color;
+        text-decoration: none;
+        padding: $size-M $size-L;
     }
 
     &__item {
         font-size: $size-M;
         color: $color;
         text-decoration: none;
-        padding: $size-M $size-L;
+        border-bottom: 2px solid $color-primary;
+        display: block;
+        padding: 10px 20px;
 
-        &--hover:hover {
-            background-color: black;
-            border-left: 2px solid $color-primary;
-            color: $color-primary;
+        &:hover {
+            background-color: $color-background2;
         }
 
-        &--active {
-            background-color: black;
-            border-left: 2px solid $color-primary;
-            color: $color-primary;
+        @media screen and (min-width: 660px){
+            padding: $size-M $size-L;
+            border-bottom: 0;
+
+            &--hover:hover {
+                background-color: black;
+                border-left: 2px solid $color-primary;
+                color: $color-primary;
+            }
+
+            &--active {
+                background-color: black;
+                border-left: 2px solid $color-primary;
+                border-bottom: 0;
+                color: $color-primary;
+            }
         }
     }
 
     &__foto {
         width: 100%;
-        height: 360px;
+        height: 404px;
         object-fit: cover;
 
             @media screen and (min-width: 910px){
@@ -145,6 +183,11 @@ h2 {
     &__title {
         grid-area: 2 / 1 / 3 / -1;
         padding: 2*$size-M;
+        display: none;
+
+        @media screen and (min-width: 910px){
+            display: block;
+        }
     }
 
     &__background {
@@ -159,48 +202,112 @@ h2 {
     }
 }
 
+.hamburger {
+    position: relative;
+    margin: 0 auto;
+
+    &__menu {
+        padding-bottom: $size-M;
+        margin: 0 auto;
+
+        @media screen and (min-width: 660px){
+            padding-bottom: 0;
+        }
+    }
+    
+        @media screen and (min-width: 910px){
+            margin: 0;
+        }
+}
+
+.menu {
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: $color-background;
+    }
+
+    &__checkbox {
+        position: absolute;
+        right: 9999px;
+                
+        &:checked ~ .header__menu {
+            display: block;
+            text-align: right;
+        }
+    }
+
+    &__toggler {
+        cursor: pointer;
+        padding-right: 2*$size-M;
+        font-size: $size-L;
+        color: $color-primary;
+        position: relative;
+        
+
+        @media screen and (min-width: 660px){
+            display: none;
+        }
+    }
+    
+}
+
+
 .glide {
     z-index: -1;
     grid-area: 1 / 1 / 4 / -1;
     max-height: 100%;
 
+    &__bullets {
+        display: none;
+        
+        @media screen and (min-width: 660px){
+            display: block;
+        }
+    }
 }
 
 .odkaz {
-        background-color: $color-primary;
-        border-radius: 5px;
-        box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.7);
-        padding: $size-M;
-        text-decoration: none;
-        display: grid;
-        gap: 20px;
+        display: none;
 
-        &__1 {
-            grid-area: 3 / 2 / -1 / 3;
+        @media screen and (min-width: 910px){
+            background-color: $color-primary;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.7);
+            padding: $size-M;
+            text-decoration: none;
+            display: grid;
+            gap: 20px;
+
+            &__1 {
+                grid-area: 3 / 2 / -1 / 3;
+            }
+
+            &__2 {
+                grid-area: 3 / 4 / -1 / 5;
+            }
+
+            &__3 {
+                grid-area: 3 / 6 / -1 / 7;
+            }
+
+        &__ikona {
+            width: 50px;
+            justify-self: center;
+            align-self: center;
         }
 
-        &__2 {
-            grid-area: 3 / 4 / -1 / 5;
+        &__popis {
+            color: $color-text;
+            font-family: $font-main;
+            font-size: $size-M;
+            margin: 0;
+            text-align: center;
         }
-
-        &__3 {
-            grid-area: 3 / 6 / -1 / 7;
-        }
-
-    &__ikona {
-        width: 50px;
-        justify-self: center;
-        align-self: center;
-    }
-
-    &__popis {
-        color: $color-text;
-        font-family: $font-main;
-        font-size: $size-M;
-        margin: 0;
-        text-align: center;
     }
 }
+
 
 .main {
     display: flex;
@@ -220,7 +327,7 @@ h2 {
 
         &--odskok::before {
             display: block;
-            width: 500px;
+            max-width: 400px;
             height: 2px;
             background-color: $color-primary;
             content:"";
@@ -304,9 +411,13 @@ h2 {
     }
 
     &__kontakt {
-        display: flex;
-        gap: 50px;
-        justify-content: center;
+        display: none;
+
+        @media screen and (min-width:660px){
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
     }
 
     &__img {
@@ -329,6 +440,21 @@ h2 {
     &__item {
         width: 100%;
         object-fit: cover;
+    }
+
+    &__PC {
+        display: none;
+
+        @media screen and (min-width:660px){
+            display: block;
+        }
+    }
+
+    &__mobil {
+
+        @media screen and (min-width:660px){
+            display: none;
+        }
     }
 }
 
